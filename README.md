@@ -26,6 +26,53 @@ this would return the string:
 "Carley McGee"
 ```
 
+To add a key, which is a symbol ruby_instructor, and a string value of Katie to the hash `positions`, you would call the hash name, place the key you want to add in square brackets against the hash name and set it equal to the value like this:
+```ruby
+positions[:ruby_instructor] = "Katie"
+```
+Doing this changes the positions hash to:
+
+```ruby
+positions = {:office_manager => "Carley McGee", :coo => "Kristi Riordan ", :placements_manager => "Jackie Morgan", :creative_designer => "Edvin Lee", :ruby_instructor => "Katie"}
+```
+
+The third test in this lab requires you to build out a multidimentional hash (monopoly).  A multidimentional hash is simply a hash of hashes - that is a hash that contains other hashes. At the end of the exercice your multidimentional monopoly hash should look like this:
+
+```ruby
+monopoly =  {
+  :railroads=>
+  {
+    :pieces=>4,
+    "rent in dollars"=>
+    {
+      :one_piece_owned=>25,
+      :two_pieces_owned=>50,
+      :three_pieces_owned=>100,
+      :four_pieces_owned=>200
+    },
+    :names=>
+    {
+      :reading_railroad=>
+      {
+        "mortgage_value"=>"$100"
+      },
+      :pennsylvania_railroad=>
+      {
+        "mortgage_value"=>"$200"
+      },
+      :b_and_o_railroad=>
+      {
+        "mortgage_value"=>"$400"
+      },
+      :shortline=>
+      {
+        "mortgage_value"=>"$800"
+      }
+    }
+  }
+}
+```
+
 ## Objectives
 1. Become comfortable reading and using the official documentation of the Ruby Language
 2. Gain proficiency instantiating hashes
