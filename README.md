@@ -7,7 +7,9 @@ resources: 1
 
 A hash is a collection of key-value pairs. A key-value pair is an association where a key is assigned a specific value. A hash is represented with curly braces `{ }` and consists of a key, usually a [symbol](http://www.ruby-doc.org/core-2.1.5/Symbol.html) that points to a value.  
 
-> `hash = {:key => "value", :another_key => "another value"}`
+```ruby
+hash = {:key => "value", :another_key => "another value"}
+```
 
 Given a hash named positions that stores employees by their positions:
 
