@@ -1,43 +1,39 @@
----
-tags: hashes, micro, introduction
-languages: ruby
-resources: 1
----
-# Introduction To Hashes
+hashes
 
-A hash is a collection of key-value pairs. A key-value pair is an association where a key is assigned a specific value. A hash is represented with curly braces `{ }` and consists of a key, usually a [symbol](http://www.ruby-doc.org/core-2.1.5/Symbol.html) that points to a value.  
+1. intro that incl repl
+2. symbols readme
+2. this readme and repl on nesting/accessing/adding
+3. monopoly lab
+4. simple nesting lab
+4. iteration readme and key for min value lab
+5. readme and repl on higher level hash methods
+6. iterating and manipulating I - apples and holidays
 
-```ruby
-hash = {:key => "value", :another_key => "another value"}
-```
+# Building Hashes
 
-Given a hash named positions that stores employees by their positions:
-
-```ruby
-positions = {:office_manager => "Carley McGee", :coo => "Kristi Riordan ", :placements_manager => "Jackie Morgan", :creative_designer => "Edvin Lee"}
-```
-
->Open up your terminal and type out the hash structure above in it.
-
-You find the value of a certain key (in the example below `office_manager`) by calling the hash name and setting the key of the value you are interested in square brackets like this:
+So far, we've seen hashes that store values in associated keys. In the hashes we've built up until now, each key points to a single value. Hashes are so useful, however, because they can be multi-dimensional, or nested. A key in a hash can point to a value that is a *collection of objects*, i.e. an array or even another hash. Let's take a look: 
 
 ```ruby
-positions[:office_manager]
-```
-this would return the string:
-```ruby
-"Carley McGee"
+flatiron_school = {
+  instructors: ["Avi", "Jeff", "Rose"], 
+  dev_team: ["Jonas", "Yeti", "Seiji"],
+  students: ["Sarah", "you", "John", "David"]
+}
 ```
 
-To add a key, which is a symbol ruby_instructor, and a string value of Katie to the hash `positions`, you would call the hash name, place the key you want to add in square brackets against the hash name and set it equal to the value like this:
-```ruby
-positions[:ruby_instructor] = "Katie"
-```
-Doing this changes the positions hash to:
+In the above example, each key points to an array of names. Nested hashes can get pretty complicated. You could have a key that points to a value of a hash and that hash can have keys that point to values of still more hashes and so on and so on. You can think of a nested hash as a tree. Let's take a closer look. 
 
-```ruby
-positions = {:office_manager => "Carley McGee", :coo => "Kristi Riordan ", :placements_manager => "Jackie Morgan", :creative_designer => "Edvin Lee", :ruby_instructor => "Katie"}
-```
+## Epic Tragedy Example
+
+You're 16 years old and back in high school english class. Luckily for us, our teacher is kind of lazy and we get to watch the Romeo and Juliet movie from the '90s with Leonardo DiCaprio and Claire Danes. 
+
+![](http://scalar.usc.edu/works/romeo-and-juliet-act-2-scene-2-through-the-years/media/RomeoandJuliet5.jpg)
+
+*If you have not seen this movie, I would recommend watching it before proceeding with this course or anything else in your life*
+
+We need to get ready for the Romeo and Juliet quiz our teacher has scheduled for us. We will definitely be required to answer some questions on the cast of characters and their attributes and relationships to one another. Let's map out that information: 
+
+
 
 ## Objectives
 1. Become comfortable reading and using the official documentation of the Ruby Language
