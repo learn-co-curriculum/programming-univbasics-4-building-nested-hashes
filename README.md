@@ -58,3 +58,5 @@ Remember to use `binding.pry` to help you get inside your methods and understand
 2. [Ruby Documentation on Hashes](http://ruby-doc.org/core-2.1.3/Hash.html)
 
 <a href='https://learn.co/lessons/ruby-intro-to-hashes-lab' data-visibility='hidden'>View this lesson on Learn.co</a>
+
+<a href='https://learn.co/lessons/ruby-intro-to-hashes-lab' data-visibility='hidden'>View this lesson on Learn.co</a>
