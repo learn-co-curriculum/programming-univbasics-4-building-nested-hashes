@@ -3,10 +3,10 @@ require_relative '../intro_to_ruby_hashes_lab.rb'
 
 
 
-describe "building a multidimensional monopoly hash" do
-  describe "adding a key-value pair to the top level of the monopoly hash" do
+describe "Building a Nested Monopoly Hash" do
+  describe "Adding Key/Value Pairs in the Top Level" do
     describe "monopoly" do
-      it "adds a key-value pair to the monopoly hash. The key should be :railroads and the value should be an empty hash" do
+      it "adds a key/value pair to the monopoly hash. The key should be :railroads and the value should be an empty hash" do
         expect(monopoly[:railroads]).to eq({})
         expect(monopoly.keys.count).to eq(1)
         expect(monopoly.values).to match_array([{}])
@@ -14,9 +14,9 @@ describe "building a multidimensional monopoly hash" do
     end
   end
 
-  describe "adding key-value pairs to the second level of the monopoly hash that we started building in the monopoly method" do
+  describe "Adding Key/Value Pairs in the Second Level" do
     describe "monopoly_with_second_tier" do
-      it "sets the first key of the :railroads hash to a symbol, :pieces, whose value is the integer 4" do
+      it "sets the first key of the :railroads hash to a symbol, :pieces, whose value is an integer, 4" do
         # the goal of this part of the lab is to have you build the multidimentional monopoly hash in sequential order
         # hence the solution to this (and the rest of the tests in this lab) builds on top of each other.
 
@@ -37,29 +37,29 @@ describe "building a multidimensional monopoly hash" do
     end
   end
 
-  describe "adding key-value pairs to the third level of the monopoly hash that we continued building in the monopoly_with_second_tier method" do
+  describe "Adding Key/Value Pairs in the Third Level" do
     describe "monopoly_with_third_tier" do
-      it "sets the 1st key of the :rent_in_dollars hash to a symbol, :one_piece_owned, whose value is the integer 25" do
+      it "sets the 1st key of the :rent_in_dollars hash to a symbol, :one_piece_owned, whose value is an integer, 25" do
         expect(monopoly_with_third_tier.values[0].values.count).to eq(3)
         expect(monopoly_with_third_tier.values[0][:rent_in_dollars].values[0]).to eq(25)
         expect(monopoly_with_third_tier.values[0][:rent_in_dollars].keys[0]).to eq(:one_piece_owned)
       end
 
-      it "sets the 2nd key of the :rent_in_dollars hash to a symbol, :two_pieces_owned, whose value is the integer 50" do
+      it "sets the 2nd key of the :rent_in_dollars hash to a symbol, :two_pieces_owned, whose value is an integer, 50" do
 
         expect(monopoly_with_third_tier.keys.count).to eq(1)
         expect(monopoly_with_third_tier.values[0].keys.count).to eq(3)
         expect(monopoly_with_third_tier.values[0][:rent_in_dollars][:two_pieces_owned]).to eq(50)
       end
 
-      it "sets the 3rd key of the :rent_in_dollars hash to a symbol, :three_pieces_owned, whose value is the integer 100" do
+      it "sets the 3rd key of the :rent_in_dollars hash to a symbol, :three_pieces_owned, whose value is an integer, 100" do
 
         expect(monopoly_with_third_tier.values[0].values.count).to eq(3)
         expect(monopoly_with_third_tier.values[0][:rent_in_dollars].keys[0]).to eq(:one_piece_owned)
         expect(monopoly_with_third_tier.values[0][:rent_in_dollars][:three_pieces_owned]).to eq(100)
       end
 
-      it "sets the 4th key of the :rent_in_dollars hash to a symbol, :four_pieces_owned, whose value is the integer 200" do
+      it "sets the 4th key of the :rent_in_dollars hash to a symbol, :four_pieces_owned, whose value is an integer, 200" do
 
         expect(monopoly_with_third_tier.values[0].values.count).to eq(3)
         expect(monopoly_with_third_tier.values[0][:rent_in_dollars].keys.count).to eq(4)
@@ -100,30 +100,30 @@ describe "building a multidimensional monopoly hash" do
     end
   end
 
-  describe "fourth level of monopoly hash" do
+  describe "Adding Key/Value Pairs in the Fourth Level" do
     describe "monopoly_with_fourth_tier" do
-      it "sets the 1st key of the :reading_railroad hash to a string, 'mortgage_value', whose value is '$100'" do
+      it "sets the 1st key of the :reading_railroad hash to a string, 'mortgage_value', whose value is also a string, '$100'" do
 
         expect(monopoly_with_fourth_tier.values[0][:names].has_key?(:reading_railroad)).to be true
         expect(monopoly_with_fourth_tier.values[0][:names].values[0].has_key?("mortgage_value")).to be true
         expect(monopoly_with_fourth_tier.values[0][:names].values[0].values[0]).to eq("$100")
       end
 
-      it "sets the 1st key of the :pennsylvania_railroad hash to a string, 'mortgage_value', whose value is '$200'" do
+      it "sets the 1st key of the :pennsylvania_railroad hash to a string, 'mortgage_value', whose value is also a string, '$200'" do
 
         expect(monopoly_with_fourth_tier.values[0][:names].has_key?(:pennsylvania_railroad)).to be true
         expect(monopoly_with_fourth_tier.values[0][:names].values[1].has_key?("mortgage_value")).to be true
         expect(monopoly_with_fourth_tier.values[0][:names].values[1].values[0]).to eq("$200")
       end
 
-      it "sets the 1st key of the :b_and_o_railroad hash to a string, 'mortgage_value', whose value is '$400'" do
+      it "sets the 1st key of the :b_and_o_railroad hash to a string, 'mortgage_value', whose value is also a string, '$400'" do
 
         expect(monopoly_with_fourth_tier.values[0][:names].has_key?(:b_and_o_railroad)).to be true
         expect(monopoly_with_fourth_tier.values[0][:names].values[2].has_key?("mortgage_value")).to be true
         expect(monopoly_with_fourth_tier.values[0][:names].values[2].values[0]).to eq("$400")
       end
 
-      it "sets the 1st key of the :shortline hash to a string, `mortgage_value`, whose value is '$800'" do
+      it "sets the 1st key of the :shortline hash to a string, `mortgage_value`, whose value is also a string, '$800'" do
 
         expect(monopoly_with_fourth_tier.values[0][:names].keys[3]).to eq(:shortline)
         expect(monopoly_with_fourth_tier.values[0][:names].values[3].has_key?("mortgage_value")).to be true
