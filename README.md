@@ -3,6 +3,8 @@
 ## Learning Goals
 
 - Build a nested hash
+- Add key/value pairs in a nested hash
+- Update key/value pairs in a nested hash
 
 ## Introduction
 
