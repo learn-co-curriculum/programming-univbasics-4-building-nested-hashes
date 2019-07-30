@@ -8,15 +8,41 @@
 
 ## Introduction
 
-In this lab, we will practice constructing a deeply nested hash.
+In this lab, we will practice constructing deeply-nested `Hash`. This means
+that we'll have a `Hash` that contains a `Hash` inside of it. Those "interior"
+or "inner" Hashes might _themselves_ contain Hashes.
 
-## Instructions
+As a reminder, this might look like:
 
-You are tasked with building a nested hash one layer (or "level") at a time, in
-a similar way to how we built our `epic_tragedy` hash in the previous lesson.
-Read the test output very carefully; it will guide you through building the
-necessary methods. At the end of the exercise, your multidimensional monopoly
-hash should look like this:
+```ruby
+# Greatly abbreviated!
+countries_of_the_world = {
+  :north_america => ["Canada", "USA"],
+  :africa => ["Ghana", "Nigeria"]
+}
+```
+
+We will work through this lab by filling out the _implementation_ of several
+methods. Each method will return a `Hash` that is ***locally defined*** within
+that method's implementation.
+
+### Process
+
+We're going to write the implementation of 4 methods
+
+* `base_hash`
+* `monopoly_with_second_tier`
+* `monopoly_with_third_tier`
+* `monopoly_with_fourth_tier`
+
+Between the different implementations, we'll build on the previous method's
+implementation. So the tests will guide you to a Hash that passes `base_hash`.
+You should take the end result Hash of `base_hash` and copy it into
+`monopoly_with_second_tier`. `monopoly_with_second_tier` has some additional
+expectations so what you just copied won't _quite_ work. The tests will guide
+you to getting it working. Repeat this process until you pass all the tests.
+At the end of the exercise, your final method will have built up to returning a
+multidimensional monopoly `Hash` that should look like this:
 
 ```ruby
 monopoly =  {
@@ -52,6 +78,12 @@ monopoly =  {
   }
 }
 ```
+
+## Conclusion
+
+Congratulations you've built a pretty complex Hash with nesting. This should
+prove to you that there's very little in this world that _can't_ be modeled
+with nesting of `Hash`es, scalar values, and `Array`s.
 
 ## Resources
 
