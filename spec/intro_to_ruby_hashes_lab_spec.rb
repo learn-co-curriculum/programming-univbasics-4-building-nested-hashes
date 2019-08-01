@@ -26,7 +26,7 @@ describe "We can create complex, nested Hashes by implementing four methods:" do
     end
   end
 
-  describe "monopoly_with_third_tier method builds on the Hash returned by monopoly_with_second_tier, but updates the Hash pointed at by :railroads such that the Hash" do
+  describe "the monopoly_with_third_tier method builds on the Hash returned by monopoly_with_second_tier, but updates the Hash pointed at by :railroads such that the Hash" do
     it "has a key called :rent_in_dollars" do
       expect(monopoly_with_third_tier[:railroads].has_key?(:rent_in_dollars)).to(be_truthy, ":railroads should point to a Hash with key rent_in_dollars")
     end
@@ -89,7 +89,7 @@ describe "We can create complex, nested Hashes by implementing four methods:" do
       end
   end
 
-  describe "monopoly_with_fourth_tier method builds on the hash returned by monopoly_with_third_tier, but updates the Hash pointed at by the :railroads :names pairs such that the railroad name key points to a Hash with a key \"mortgage_value\" that is a String with a $-sign and an Integer after it" do
+  describe "the monopoly_with_fourth_tier method builds on the hash returned by monopoly_with_third_tier, but updates the Hash so that each of the :railroads :names keys points to a Hash with a key \"mortgage_value\" that is a String with a $-sign and an Integer after it" do
 
     it "reports reading_railroad's mortgage value as $100" do
       expect(monopoly_with_fourth_tier[:railroads][:names][:reading_railroad]["mortgage_value"]).to eq("$100")
