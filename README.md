@@ -2,19 +2,19 @@
 
 ## Learning Goals
 
-- Build a nested hash
+- Build a nested `Hash`
 
 ## Introduction
 
-In this lab, we will practice constructing a deeply nested hash.
+In this lab, we will practice constructing a deeply nested `Hash`.
 
 ## Instructions
 
-You are tasked with building a nested hash one layer (or "level") at a time, in
-a similar way to how we built our `epic_tragedy` hash in the previous lesson.
+You are tasked with building a nested `Hash` one layer (or "level") at a time, in
+a similar way to how we built our `epic_tragedy` `Hash` in the previous lesson.
 Read the test output very carefully; it will guide you through building the
 necessary methods. At the end of the exercise, your multidimensional monopoly
-hash should look like this:
+`Hash` should look like this:
 
 ```ruby
 monopoly =  {
